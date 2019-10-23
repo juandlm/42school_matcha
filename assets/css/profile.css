@@ -1,0 +1,87 @@
+#mapid {
+	max-width: 300px;
+	height: 300px;
+}
+
+.blink_text {
+	animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0.3;
+	}
+}
+
+.carousel-item:hover .image-controls {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.1s ease;
+}
+
+.image-controls {
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	top: 0;
+	background-color: rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.1s ease;
+}
+
+.tooltip {
+	pointer-events: none;
+}
+
+#imgUl {
+	position: absolute;
+	left: 0;
+	top: 0;
+	opacity: 0;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+}
+
+.prf-main {
+	position: relative;
+}
+
+@media (min-width: 768px) {
+	.prf-main {
+		border-left: 1px solid #dee2e6!important;
+	}
+}
+
+.user_status {
+	position: absolute;
+	right: 15px;
+	top: 7px;
+	font-size: 12.5px;
+	line-height: 18px;
+	color: #939393;
+}
+
+.prf-biography {
+	height: 20vh;
+	overflow: hidden;
+	border: 1px solid lightgrey;
+	border-radius: 5px;
+	padding: 0 10px;
+	padding-right: 16px;
+	word-wrap: break-word;
+}
+
+.prf-biography:hover {
+	overflow-y: scroll;
+	padding-right: 1px;
+}
+
+img.leaflet-marker-icon:hover {
+	cursor: help;
+}
+
+.popover-body {
+	font-size: 13px;
+}

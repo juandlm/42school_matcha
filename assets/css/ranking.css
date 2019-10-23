@@ -1,0 +1,20 @@
+td:nth-child(1),
+td:nth-child(3),
+td:nth-child(5) {
+	color: #E60A54;
+	font-weight: bold;
+}
+
+.table-striped > tbody > tr:first-child > td.position > i {
+	color: #ffc300;
+}
+.table-striped > tbody > tr:nth-child(2) > td.position > i {
+	color: #b0c4de;
+}
+.table-striped > tbody > tr:nth-child(3) > td.position > i {
+	color: #ae6842;
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) > td {
+   background-color: #fcebf0;
+}

@@ -1,0 +1,187 @@
+.matcha-search {
+	display: flex;
+	justify-content: center;
+	padding: 15px;
+}
+
+.matcha-search form {
+	width: 100%;
+	margin: 0;
+}
+
+.matcha-search form .inner-form {
+	width: 100%;
+}
+
+.matcha-search form .inner-form .input-field {
+	position: relative;
+}
+
+.matcha-search form .inner-form .input-field input {
+	height: 100%;
+	border: 0;
+	background: #fff;
+	display: block;
+	width: 100%;
+	padding: 10px 32px 10px 70px;
+	font-size: 18px;
+	border-radius: 3px;
+	height: 70px;
+}
+
+.matcha-search form .inner-form .basic-search {
+	border-bottom: 2px solid #E60A54;
+}
+
+.matcha-search form .inner-form .basic-search .input-field {
+	width: 100%;
+}
+
+.matcha-search form .inner-form .basic-search .input-field input {
+	padding: 10px 80px 10px 40px;
+}
+
+.matcha-search form .inner-form .basic-search .input-field .icon-wrap {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	width: 60px;
+	height: 100%;
+}
+
+.matcha-search form .inner-form .basic-search .input-field .icon-wrap svg {
+	width: 34px;
+	height: 34px;
+	fill: #ccc;
+}
+
+.matcha-search form .inner-form .advanced-search {
+	background: #fff;
+	padding: 20px 40px 40px 40px;
+}
+
+@media screen and (max-width: 767px) {
+	.matcha-search form .inner-form .basic-search .input-field input {
+		padding: 10px 80px 10px 15px;
+	}
+	.matcha-search form .inner-form .basic-search .input-field .icon-wrap {
+		width: 80px;
+		justify-content: center;
+	}
+	.matcha-search form .inner-form .basic-search .input-field .icon-wrap svg {
+		width: 30px;
+		height: 30px;
+	}
+	.matcha-search form .inner-form .advanced-search {
+		padding: 30px 15px;
+	}
+	.matcha-search form .inner-form .advanced-search .row {
+		display: block;
+	}
+}
+
+.advanced-search .noUi-connect {
+	background: #E60A54;
+}
+
+[disabled] .noUi-connect {
+	background: #B8B8B8!important;
+}
+
+.advanced-search .slide-value-l {
+	font-size: 12px;
+}
+
+.advanced-search .slide-value-r {
+	font-size: 12px;
+}
+
+.advanced-search .custom-control-input:checked~.custom-control-label::before {
+	border-color: #E60A54;
+	background-color: #E60A54;
+}
+
+.advanced-search .custom-control-label {
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+
+.advanced-search #ratgSlider .noUi-base .noUi-origin:nth-child(3) .noUi-handle:before,
+.advanced-search #ratgSlider .noUi-base .noUi-origin:nth-child(3) .noUi-handle:after {
+	display: none;
+}
+
+.advanced-search #ratgSlider .noUi-tooltip {
+	font-size: 12px;
+	color: #E60A54;
+	font-weight: 800;
+	bottom: 0;
+	z-index: 2000;
+	border: 0;
+	background: transparent;
+}
+
+.search-result {
+	position: relative;
+	padding: 0;
+	flex: 0 0 calc(100%/6);
+}
+
+.search-result:hover .result-overlay {
+	opacity: 1;
+	visibility: visible;
+	transition: all 0.5s ease;
+}
+
+.search-result .result-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgb(252, 235, 240, 0.7);
+	opacity: 0;
+	visibility: hidden;
+	transition: all 0.5s ease;
+}
+
+.search-result .result-overlay>div {
+	position: absolute;
+	color: #E60A54;
+	font-size: .8rem;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#searchResults {
+	position: relative;
+	padding-top: 72px;
+}
+
+#sortBtn {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	display: none;
+	top: 75px;
+}
+
+#sortBtn .sticky-top {
+	top: 75px;
+}
+
+#sortBtn .sort-menu button#dropdownMenuButton {
+	opacity: 0.4;
+	transition: ease 0.3s;
+}
+
+#sortBtn .sort-menu button#dropdownMenuButton:hover,
+#sortBtn .sort-menu button#dropdownMenuButton:focus {
+	opacity: 1;
+	transition: ease 0.3s;
+}

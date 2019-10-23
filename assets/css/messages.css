@@ -1,0 +1,166 @@
+.main-wrapper {
+	padding-top: 72px;
+	padding-bottom: 52px;
+}
+
+.conversations {
+	background-color: white;
+	height: calc(100vh - 72px - 52px);
+}
+
+.contacts {
+	overflow-y: scroll;
+	width: 40%;
+	height: 100%;
+}
+
+#searchBar {
+	border-width: 0 0 1px 0;
+	border-color: #dee2e6;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+.con_wrapper:hover {
+	background-color: #EBEBEB;
+	cursor: pointer;
+}
+
+.con_wrapper:hover i.fa-ellipsis-h {
+	display: block;
+}
+
+.con_wrapper:hover .unread-message,
+.contact-popover:focus+a.conversation-item .unread-message {
+	transform: translate3d(0px, 60%, 0px);
+	transition: transform .1s ease-in-out;
+}
+
+.unread-message {
+	transform: translate3d(0px, 0px, 0px);
+	transition: transform .1s ease-in-out;
+}
+
+.contact-popover {
+	right: 16px;
+	top: 35%;
+	transform: translate(0, -35%);
+}
+
+.contact-popover>i.fa-ellipsis-h {
+	display: none;
+}
+
+.contact-popover:focus>i.fa-ellipsis-h {
+	display: block!important;
+}
+
+.conversation-item .picture {
+	min-width: 60px;
+	width: 60px;
+	min-height: 60px;
+	height: 60px;
+}
+
+.conversation-item .last-message {
+	white-space: nowrap;
+	max-width: 18vw;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.conversation-item.c_active {
+	background: #EBEBEB;
+}
+
+.messages {
+	width: 60%;
+}
+
+.messages .back-to-contacts {
+	position: absolute;
+	text-align: center;
+	width: 1rem;
+	height: 100%;
+}
+
+.messages .back-to-contacts>i {
+	position: relative;
+	top: calc(50% - 24.5px);
+}
+
+.messages .match-info {
+	position: absolute;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	opacity: 1;
+}
+
+.messages .match-info img {
+	width: calc(120px + 2vh);
+	height: calc(120px + 2vh);
+}
+
+.message-log {
+	overflow-y: scroll;
+	overflow: -moz-scrollbars-none;
+	-ms-overflow-style: none;
+}
+
+.message-log::-webkit-scrollbar {
+	width: 0 !important
+}
+
+.message-time {
+	display: block;
+	font-size: 11px;
+	margin: 8px 0 0;
+}
+
+.received {
+	float: left;
+	width: 50%;
+	margin: 5px 50% 5px 0;
+}
+
+.received .message-time {
+	text-align: left;
+}
+
+.received p,
+.sent p {
+	border-radius: 3px;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px 10px 5px 12px;
+	width: 100%;
+	word-wrap: break-word;
+}
+
+.received p {
+	background: #DDDDDD none repeat scroll 0 0;
+	color: #646464;
+}
+
+.sent p {
+	background: #0074D9 none repeat scroll 0 0;
+	color: #fff;
+	;
+}
+
+.sent {
+	float: right;
+	width: 50%;
+	margin: 5px 0 5px 50%;
+}
+
+.sent .message-time {
+	text-align: right;
+}
+
+#messageInput {
+	font-size: 15px;
+	box-shadow: none;
+}

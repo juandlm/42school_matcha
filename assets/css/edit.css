@@ -1,0 +1,146 @@
+input[type=date],
+input[type=datetime-local],
+input[type=month],
+input[type=time] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.form-row label {
+	padding: 0;
+	margin: 0;
+}
+
+#mapid {
+	width: 100%;
+	height: 300px;
+}
+
+.tag_list {
+	display: block;
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+	font-size: 14px;
+}
+
+.tag_list li>a>i {
+	visibility: hidden;
+	opacity: 0;
+	transition: ease-in-out 0.1s;
+}
+
+.tag_list li:hover>a>i {
+	visibility: visible;
+	opacity: 1;
+	transition: ease-in-out 0.1s;
+}
+
+.tags_block {
+	top: calc(100% - 1.60px);
+	background: #ffffff;
+	width: 100%;
+	max-height: 200px;
+	display: none;
+	z-index: 1;
+	border: 2px solid #3333;
+	border-radius: 0 0 6px 6px;
+	text-align: left;
+	overflow: hidden;
+}
+
+.tags_ul {
+	background-color: #fcebf0;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0;
+	list-style: none;
+	font-size: 13px;
+}
+
+.tags_ul>li {
+	display: inline-block;
+	padding: 5px;
+}
+
+#tags_div {
+	text-align: left;
+	height: auto;
+	overflow: hidden;
+}
+
+.tags_div_focus {
+	color: #495057;
+	background-color: #fff;
+	border-color: #80bdff;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, .25);
+}
+
+#tags_input {
+	border: 0;
+	margin-left: 10px;
+	width: 100%;
+}
+
+#geolocSwitch+label:hover {
+	cursor: pointer;
+}
+
+.profile,
+.location {
+	display: flex;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	width: 100%;
+	padding: 0 1rem;
+}
+
+@media (min-width: 767px) {
+	.profile,
+	.location {
+		width: 50%;
+	}
+	#mapid {
+		height: 100%;
+	}
+}
+
+.customloc-hint:hover {
+	cursor: help;
+}
+
+.customloc-hint {
+	text-decoration-line: underline;
+	text-decoration-style: dotted;
+}
+
+.customloc-anim {
+	-webkit-animation-name: hvr-icon-bob-float, hvr-icon-bob;
+	animation-name: hvr-icon-bob-float, hvr-icon-bob;
+	-webkit-animation-duration: .3s, 1.5s;
+	animation-duration: .3s, 1.5s;
+	-webkit-animation-delay: 0s, .3s;
+	animation-delay: 0s, .3s;
+	-webkit-animation-timing-function: ease-out, ease-in-out;
+	animation-timing-function: ease-out, ease-in-out;
+	-webkit-animation-iteration-count: 1, infinite;
+	animation-iteration-count: 1, infinite;
+	-webkit-animation-fill-mode: forwards;
+	animation-fill-mode: forwards;
+	-webkit-animation-direction: normal, alternate;
+	animation-direction: normal, alternate;
+}
+
+.marker-hint {
+	position: absolute;
+	z-index: 999;
+	bottom: 5px;
+	left: 5px;
+}
+
+.marker-hint:hover {
+	cursor: help;
+}

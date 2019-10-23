@@ -1,0 +1,16 @@
+# http://httpd.apache.org/docs/2.2/content-negotiation.html
+Options -MultiViews
+
+RewriteEngine On
+
+# Prevent people from looking directly into folders
+Options -Indexes
+
+# if is not a directory
+RewriteCond %{REQUEST_FILENAME} !-d
+# if not a regular file that exists
+RewriteCond %{REQUEST_FILENAME} !-f
+# if not a symbolic link
+RewriteCond %{REQUEST_FILENAME} !-l
+# then rewrite the URL in the following way:
+RewriteRule ^(.+)$ index.php?url=$1 [QSA,L]
