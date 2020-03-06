@@ -8,4 +8,4 @@ A user is able to sign up, log in, complete their profile, look up other profile
 ### Technologies used
 * PHP 7.2
 * Bootstrap 4.3.1
-* JQuery
+* JQuery 3.4.1
