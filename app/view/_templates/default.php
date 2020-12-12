@@ -117,7 +117,7 @@
 		</main>
 	<footer class="navbar fixed-bottom navbar-light bg-light">
 		<span class="navbar-text copyright">
-		<img alt="footer logo" id="footer-logo" class="mx-2" src="<?= URL; ?>assets/images/logo.svg">Matcha © 2019<span class="mx-2">-</span><a href="http://juan.digital">Juan De la Mata</a>
+		<img alt="footer logo" id="footer-logo" class="mx-2" src="<?= URL; ?>assets/images/logo.svg">Matcha © 2019<span class="mx-2">-</span><a href="https://juan.digital">Juan De la Mata</a>
 		</span>
 	</footer>
 <?php
