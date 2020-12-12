@@ -1,13 +1,15 @@
 <?php
+
 namespace Matcha\Core;
 
 class Application
 {
-	private $_url_controller = null;
-	private $_url_action = null;
-	private $_url_params = [];
+    private $_url_controller = null;
+    private $_url_action = null;
+    private $_url_params = [];
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->splitUrl();
 
         if (!$this->_url_controller) {
@@ -16,8 +18,10 @@ class Application
         } elseif (file_exists(APP . 'Controller/' . ucfirst($this->_url_controller) . 'Controller.php')) {
             $controller = "\\Matcha\\Controller\\" . ucfirst($this->_url_controller) . 'Controller';
             $this->_url_controller = new $controller();
-            if (method_exists($this->_url_controller, $this->_url_action) &&
-                is_callable(array($this->_url_controller, $this->_url_action))) {
+            if (
+                method_exists($this->_url_controller, $this->_url_action) &&
+                is_callable(array($this->_url_controller, $this->_url_action))
+            ) {
                 if (!empty($this->_url_params)) {
                     call_user_func_array(array($this->_url_controller, $this->_url_action), $this->_url_params);
                 } else {
@@ -37,7 +41,8 @@ class Application
         }
     }
 
-    private function splitUrl() {
+    private function splitUrl()
+    {
         if (isset($_GET['url'])) {
             $url = trim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
@@ -47,7 +52,7 @@ class Application
             unset($url[0], $url[1]);
             $this->_url_params = array_values($url);
 
-			//debug
+            //debug
             //echo 'Controller: ' . $this->_url_controller . '<br>';
             //echo 'Action: ' . $this->_url_action . '<br>';
             //echo 'Parameters: ' . print_r($this->_url_params, true) . '<br>';

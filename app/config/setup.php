@@ -1,13 +1,13 @@
 <?php
+
 namespace Matcha\config;
 
 use PDO;
 
-try
-{
-	$pdo = new \PDO(DB_DSN_S, DB_USER, DB_PASS);
-	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-	$pdo->query("
+try {
+    $pdo = new \PDO(DB_DSN_S, DB_USER, DB_PASS);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->query("
 		DROP DATABASE IF EXISTS " . DB_NAME . ";
 		CREATE DATABASE IF NOT EXISTS " . DB_NAME . ";
 		USE " . DB_NAME . ";
@@ -2282,12 +2282,10 @@ try
 		MODIFY `vst_id` int(11) NOT NULL AUTO_INCREMENT;
 		COMMIT;");
 
-	if (isset($_SESSION['user_id']) || isset($_SESSION['user_username']))
-		session_destroy();
-		
-	\Matcha\Lib\Alert::success_alert('The Database ' . strtoupper(DB_NAME) .' has succesfully been created.');
-}
-catch (Exception $error)
-{
-	echo $error;
+    if (isset($_SESSION['user_id']) || isset($_SESSION['user_username']))
+        session_destroy();
+
+    \Matcha\Lib\Alert::success_alert('The Database ' . strtoupper(DB_NAME) . ' has succesfully been created.');
+} catch (Exception $error) {
+    echo $error;
 }
