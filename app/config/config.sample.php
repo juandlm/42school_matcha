@@ -2,10 +2,10 @@
 define("ENVIRONMENT", "dev");
 define("WORK_OS", stristr(php_uname('s'), "win") ? "WIN" : "OTHER");
 
-$DB["USER"] = 'gjqoklxc_rootj';
-$DB["PASSWORD"] = '@DbRootNc14';
-$DB["NAME"] = 'gjqoklxc_matcha';
-$DB["HOST"] = 'localhost';
+$DB["USER"] = 'root';
+$DB["PASSWORD"] = WORK_OS == "WIN" ? 'root' : 'rootpass';
+$DB["NAME"] = 'db_matcha';
+$DB["HOST"] = WORK_OS == "WIN" ? 'localhost' : 'mysql';
 $DB["DSN"] = 'mysql:dbname=' . $DB["NAME"] . ';host=' . $DB["HOST"] . ';charset=utf8mb4';
 $DB["DSN_S"] = 'mysql:host=' . $DB["HOST"] . ';charset=utf8';
 
